@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="CIT195.TBQuestGame.GameController">
+    <Position X="1" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAUgAAABABEAAAAhAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\GameController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CIT195.TBQuestGame.ConsoleView">
+    <Position X="4" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>BAiBAAQACQAACAAAAEAAIAABAAEAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Views\ConsoleView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CIT195.TBQuestGame.ControllerSettings">
+    <Position X="1" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Controllers\ControllerSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CIT195.TBQuestGame.ViewSettings">
+    <Position X="7.5" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAQACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ViewSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

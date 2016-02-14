@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CIT195.TBQuestGame.Sprint1
+namespace CIT195.TBQuestGame
 {
     /// <summary>
     /// class to manage the game flow
@@ -14,7 +14,7 @@ namespace CIT195.TBQuestGame.Sprint1
         #region FIELDS
 
         //
-        // declare the major data objects
+        // declare the major data ojects
         //
         private Player _myPlayer;
         private Hall _hall;
@@ -77,7 +77,7 @@ namespace CIT195.TBQuestGame.Sprint1
         }
 
         /// <summary>
-        /// initialize the player with their properties
+        /// initialize the player wtth their properities
         /// </summary>
         private void InitializePlayer()
         {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CIT195.TBQuestGame.Sprint1
+namespace CIT195.TBQuestGame
 {
     public class ConsoleView
     {
@@ -26,9 +26,6 @@ namespace CIT195.TBQuestGame.Sprint1
         // declare the major data objects
         //
         private Player _myPlayer;
-        private Hall _hall;
-        private GuestList _guestList;
-        private StaffList _staffList;
 
         #endregion
 
@@ -43,14 +40,9 @@ namespace CIT195.TBQuestGame.Sprint1
         /// constructor to create the console view, send all major data objects
         /// </summary>
         /// <param name="myPlayer">active player object</param>
-        /// <param name="hall">current hall object</param>
-        /// <param name="hall">current guest list object</param>
-        public ConsoleView(Player myPlayer, Hall hall, GuestList guests, StaffList staff)
+        public ConsoleView(Player myPlayer)
         {
             _myPlayer = myPlayer;
-            _hall = hall;
-            _guestList = guests;
-            _staffList = staff;
             InitializeConsoleWindow();
         }
 
@@ -169,119 +161,6 @@ namespace CIT195.TBQuestGame.Sprint1
             DisplayContinuePrompt();
         }
 
-        /// <summary>
-        /// display a list of the guest properties
-        /// </summary>
-        /// <param name="guestNumber">the guestList array index</param>
-        public void DisplayGuestInformation(int guestNumber)
-        {
-            Console.WriteLine();
-
-            DisplayMessage("Name: " + _guestList.Guests[guestNumber].Name);
-            DisplayMessage("Race: " + _guestList.Guests[guestNumber].Race);
-            DisplayMessage("Gender: " + _guestList.Guests[guestNumber].Gender);
-            DisplayMessage("Appears Friendly: " + _guestList.Guests[guestNumber].AppearsFriendly);
-            DisplayMessage("Greeting: " + _guestList.Guests[guestNumber].InitialGreeting);
-        }
-
-        /// <summary>
-        /// display a list of staff properties
-        /// </summary>
-        /// <param name="staffNumber">the staffList array index</param>
-        public void DisplayStaffInformation(int staffNumber)
-        {
-            Console.WriteLine();
-
-            DisplayMessage("Name: " + _staffList.Staff[staffNumber].Name);
-            DisplayMessage("Race: " + _staffList.Staff[staffNumber].Race);
-            DisplayMessage("Gender: " + _staffList.Staff[staffNumber].Gender);
-            DisplayMessage("Appears Friendly: " + _staffList.Staff[staffNumber].AppearsFriendly);
-            DisplayMessage("Greeting: " + _staffList.Staff[staffNumber].InitialGreeting);
-        }
-
-        /// <summary>
-        /// display all of the rooms
-        /// </summary>
-        public void DisplayHallInformation()
-        {
-            DisplayReset();
-
-            Console.WriteLine();
-
-            Console.ForegroundColor = ConsoleColor.Red;
-            DisplayMessage("The Hall contains the following rooms:");
-            Console.ForegroundColor = ConsoleColor.White;
-
-            for (int roomNumber = 0; roomNumber < Hall.MAX_ROOMS; roomNumber++)
-            {
-                DisplayRoomInformation(roomNumber);
-            }
-
-            DisplayContinuePrompt();
-        }
-
-        /// <summary>
-        /// display all of the guests
-        /// </summary>
-        public void DisplayGuestListInformation()
-        {
-            DisplayReset();
-
-            Console.WriteLine();
-
-            Console.ForegroundColor = ConsoleColor.Red;
-            DisplayMessage("The game contains the following guests:");
-            Console.ForegroundColor = ConsoleColor.White;
-
-            for (int guestNumber = 0; guestNumber < GuestList.MAX_NUMBER_OF_GUESTS; guestNumber++)
-            {
-                if (_guestList.Guests[guestNumber] != null)
-                {
-                    DisplayGuestInformation(guestNumber);
-                }
-
-            }
-
-            DisplayContinuePrompt();
-        }
-
-        /// <summary>
-        /// display all of the staff
-        /// </summary>
-        public void DisplayStaffListInformation()
-        {
-            DisplayReset();
-
-            Console.WriteLine();
-
-            Console.ForegroundColor = ConsoleColor.Red;
-            DisplayMessage("The game contains the following staff:");
-            Console.ForegroundColor = ConsoleColor.White;
-
-            for (int staffNumber = 0; staffNumber < StaffList.MAX_NUMBER_OF_STAFF; staffNumber++)
-            {
-                if (_staffList.Staff[staffNumber] != null)
-                {
-                    DisplayStaffInformation(staffNumber);
-                }
-
-            }
-
-            DisplayContinuePrompt();
-        }
-
-        /// <summary>
-        /// display a list of the room properties
-        /// </summary>
-        /// <param name="roomNumber">the hall array index</param>
-        public void DisplayRoomInformation(int roomNumber)
-        {
-            Console.WriteLine();
-            DisplayMessage("Name: " + _hall.Rooms[roomNumber].Name);
-            DisplayMessage("Description: " + _hall.Rooms[roomNumber].Description);
-            DisplayMessage("Lighted: " + _hall.Rooms[roomNumber].IsLighted);
-            DisplayMessage("Door Open: " + _hall.Rooms[roomNumber].CanEnter);
-        }
 
         /// <summary>
         /// display a message in the message area
@@ -344,10 +223,7 @@ namespace CIT195.TBQuestGame.Sprint1
                 //
                 Console.WriteLine(
                     leftTab + "1. Player Information" + Environment.NewLine +
-                    leftTab + "2. Hall Information" + Environment.NewLine +
-                    leftTab + "3. Guest List Information" + Environment.NewLine +
-                    leftTab + "4. Staff List Information" + Environment.NewLine +
-                    leftTab + "5. Exit" + Environment.NewLine);
+                    leftTab + "2. Exit" + Environment.NewLine);
 
                 //
                 // get and process the user's response
@@ -359,16 +235,7 @@ namespace CIT195.TBQuestGame.Sprint1
                     case '1':
                         DisplayPlayerInformation();
                         break;
-                    case '2':
-                        DisplayHallInformation();
-                        break;
-                    case '3':
-                        DisplayGuestListInformation();
-                        break;
-                    case '4':
-                        DisplayStaffListInformation();
-                        break;
-                    case '5':
+                     case '2':
                         usingMenu = false;
                         break;
                     default:

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CIT195.TBQuestGame.Sprint1
 {
     /// <summary>
-    /// Guest class, inherites from Character class
+    /// Guest class, inherits from Character class
     /// </summary>
     public class Guest : Character, IGreeting
     {

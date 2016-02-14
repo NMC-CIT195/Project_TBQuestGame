@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CIT195.TBQuestGame.Sprint1
+namespace CIT195.TBQuestGame
 {
     /// <summary>
     /// class to manage the game flow
@@ -17,9 +17,6 @@ namespace CIT195.TBQuestGame.Sprint1
         // declare the major data objects
         //
         private Player _myPlayer;
-        private Hall _hall;
-        private GuestList _guestList;
-        private StaffList _staffList;
         private ConsoleView _userConsoleView;
 
         #endregion
@@ -66,7 +63,7 @@ namespace CIT195.TBQuestGame.Sprint1
             //
             // instantiate a new ConsoleView object
             //
-            _userConsoleView = new ConsoleView(_myPlayer, _hall, _guestList, _staffList);
+            _userConsoleView = new ConsoleView(_myPlayer);
 
             _userConsoleView.DisplayWelcomeScreen();
 

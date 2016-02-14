@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CIT195.TBQuestGame.Sprint1
+namespace CIT195.TBQuestGame
 {
     /// <summary>
-    /// Player class, inherits from Character class
+    /// Player class, inherites from Character class
     /// </summary>
     public class Player : Character
     {
@@ -34,7 +34,7 @@ namespace CIT195.TBQuestGame.Sprint1
         #region CONSTRUCTORS
 
         /// <summary>
-        /// instantiate a player and set initial properties
+        /// instantiate a player and set intial properties
         /// </summary>
         /// <param name="name">player name</param>
         /// <param name="gender">player gender</param>
