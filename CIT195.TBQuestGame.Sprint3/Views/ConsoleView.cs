@@ -398,7 +398,7 @@ namespace CIT195.TBQuestGame.Sprint3
             while (usingMenu)
             {
                 //
-                // set a string varible with a lenght equal to the horizontal margin and filled with spaces
+                // set a string variable with a length equal to the horizontal margin and filled with spaces
                 //
                 string leftTab = ConsoleUtil.FillStringWithSpaces(DISPLAY_HORIZONTAL_MARGIN);
 
@@ -616,7 +616,7 @@ namespace CIT195.TBQuestGame.Sprint3
                     playerActionChoice = (Player.ActionChoice)playerActionChoiceIndex;
 
                     Console.WriteLine();
-                    DisplayMessage("You have choosen the following action: " +
+                    DisplayMessage("You have chosen the following action: " +
                         ConsoleUtil.ToLabelFormat(playerActionChoice.ToString()));
                     validPlayerResponse = true;
 
@@ -660,7 +660,7 @@ namespace CIT195.TBQuestGame.Sprint3
 
                 foreach (Room room in _hall.Rooms)
                 {
-                    // add one to the array indes to start the diplayed numbering at 1
+                    // add one to the array index to start the displayed numbering at 1
                     displayedRoomNumber = Array.IndexOf(_hall.Rooms, room) + 1;
 
                     DisplayMessage("(" + displayedRoomNumber + ") " + room.Name);
@@ -683,7 +683,7 @@ namespace CIT195.TBQuestGame.Sprint3
                     playerRoomNumberChoice--;
 
                     Console.WriteLine();
-                    DisplayMessage("You have choosen the following room: " +
+                    DisplayMessage("You have chosen the following room: " +
                         _hall.Rooms[playerRoomNumberChoice].Name);
 
                     validPlayerResponse = true;
